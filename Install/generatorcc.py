@@ -11,36 +11,36 @@ version = "1.0.0"
 #Mensaje
 #os.system ("clear")
 def usage():
-    print("generadorcc.py version:{}".format(version))
+    print("generatorcc.py version:{}".format(version))
     print("")
     print("\033[1;31m               +------------------------------+")
-    print("               +\033[1;32m     GENERADOR DE BIN RS      \033[1;31m+")
+    print("               +\033[1;32m     BIN RS GENERATOR      \033[1;31m+")
     print("               +------------------------------+")
     print("")
     print("+---------------+")
     print("+\033[1;32m Metodo de uso\033[1;31m +")
     print("+---------------+")
     print("")
-    print("\033[1;36m     python2 generadorcc.py -b     [Opciones de uso]")
-    print("     python2 generadorcc.py -h     Mensaje de ayuda")
+    print("\033[1;36m     python2 generatorcc.py -b     [Usage options]")
+    print("     python2 generatorcc.py -h     Help message")
     print("\033[1;31m")
     print("+-----------------+")
     print("+\033[;32m Opciones de uso\033[1;31m +")
     print("+-----------------+")
     print("")
-    print("\033[1;36m     -b, -bin          Formato de bin")
-    print("     -u, -cantidad     Cantidad de tarjetas a generar")
-    print("     -c, -ccv          Genera ccv al azar")
-    print("     -d, -date         Genera fechas al azar")
-    print("     -g, -guardar      Guarda las tarjetas en un archivo")
+    print("\033[1;36m     -b, -bin          Bin format")
+    print("     -u, -Quantity     Number of cards to generate")
+    print("     -c, -ccv          Randomly generate ccv")
+    print("     -d, -date         Generate random dates")
+    print("     -g, -save      Save cards to file")
     print("\033[1;31m")
     print("+----------------+")
     print("+\033[;32m Ejemplo de uso\033[1;31m +")
     print("+----------------+")
     print("")
-    print("\033[1;33m     CANTIDAD\033[0m")
+    print("\033[1;33m     QUANTITY\033[0m")
     print("")
-    print("\033[1;36m     python2 generadorcc.py -b 123456xxxxxxxxxx -u 40 -d -c ")
+    print("\033[1;36m     python2 generatorcc.py -b 123456xxxxxxxxxx -u 40 -d -c ")
     print("")
     print("\033[0m")
 
@@ -54,16 +54,16 @@ def parseOptions(argv):
     check = False
 
     try:
-        opts, args = getopt.getopt(argv, "h:b:u:gcd",["help", "bin", "guardar", "cantidad", "ccv", "date"])
+        opts, args = getopt.getopt(argv, "h:b:u:gcd",["help", "bin", "save", "quantity", "ccv", "date"])
         for opt, arg in opts:
             if opt in ("-h"):
                 usage()
                 sys.exit()
             elif opt in ("-b", "-bin"):
                 bin_format = arg
-            elif opt in ("-g", "-guardar"):
+            elif opt in ("-g", "-save"):
                 saveopt = True
-            elif opt in ("-u", "-cantidad"):
+            elif opt in ("-u", "-quantity"):
                 limit = arg
             elif opt in ("-c", "-ccv"):
                 ccv = True
