@@ -5,7 +5,7 @@
 #	SCRIPT:				ShellBot.sh
 #	VERSÃO:				5.3
 #	DESENVOLVIDO POR:	Juliano Santos [SHAMAN]
-#	PÁGINA:				http://www.shellscriptx.blogspot.com.br
+#	PÁGINA:				http://www.24clan.com.br
 #	FANPAGE:			https://www.facebook.com/shellscriptx
 #	GITHUB:				https://github.com/shellscriptx
 # 	CONTATO:			shellscriptx@gmail.com
